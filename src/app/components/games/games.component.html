@@ -1,0 +1,12 @@
+<app-game-form [currentGame]="currentGame" [isEdit]="isEdit" (newGame)="onNewGame($event)" (updatedGame)="onUpdatedGame($event)"></app-game-form>
+<h2>Games</h2>
+<div class="card" *ngFor="let game of games">
+  <div class="card-body">
+    <h3><a routerLink="/game/{{ game.id }}">{{ game.title }}</a></h3>
+    <p>{{ game.body }}</p>
+    <hr>
+    <button (click)="viewGame(game)" class="btn btn-light"><i class="fa fa-eye"></i></button>
+    <button (click)="removeGame(game)" class="btn btn-danger"><i class="fa fa-remove"></i></button>
+    <button (click)="editGame(game)" class="btn btn-light"><i class="fa fa-pencil"></i></button>
+  </div>
+</div>

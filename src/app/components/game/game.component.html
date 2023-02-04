@@ -1,0 +1,8 @@
+<a routerLink="/games" class="btn btn-light btn-sm mb-3">Go Back</a>
+
+<div *ngIf="game" class="card bg-light">
+  <div class="card-body">
+    <h3>{{ game.title }}</h3>
+    <p>{{ game.body }}</p>
+  </div>
+</div>
